@@ -20,7 +20,7 @@ export default function CountButton(props) {
     useEffect(rollOverCount, [count])
     return (
         <div>
-            <button style={buttonStyle} onclick={handleClick}>{props.name}</button>
+            <button style={buttonStyle} onClick={handleClick}>{props.name}</button>
             <div>{count}</div>
         </div>
     )
