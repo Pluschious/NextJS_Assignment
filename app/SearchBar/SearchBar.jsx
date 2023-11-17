@@ -9,7 +9,7 @@ export default function SearchBar() {
         fetch("https://fakestoreapi.com/products")
         .then(response => response.json())
         .then(products => {
-            const filtered = products.filter((el)=>{return el.title.toLowercase().includes(searchString.toLowerCase())})
+            const filtered = products.filter((el)=>{return el.title.toLowerCase().includes(searchString.toLowerCase())})
             const currentFilter = filtered.map((product, index) => {
                 return (<div className="prodStyle">
                     <p style={{fontSize:"1rem"}}>{product.title}</p>
